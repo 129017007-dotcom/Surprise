@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #06050e;
+    color: #fff1f2;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #root {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-romantic-gradient {
+    background: linear-gradient(135deg, #fff1f2 0%, #fda4af 50%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-card {
+    background: rgba(18, 15, 39, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(251, 113, 133, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    background: rgba(26, 21, 56, 0.75);
+    border-color: rgba(244, 114, 182, 0.4);
+    box-shadow: 0 12px 40px -5px rgba(244, 114, 182, 0.35);
+  }
+
+  .glass-modal {
+    background: rgba(12, 10, 26, 0.88);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(244, 114, 182, 0.25);
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+  }
+
+  .glow-text-rose {
+    text-shadow: 0 0 20px rgba(251, 113, 133, 0.6), 0 0 40px rgba(244, 114, 182, 0.3);
+  }
+
+  .glow-text-gold {
+    text-shadow: 0 0 15px rgba(251, 191, 36, 0.6), 0 0 30px rgba(254, 240, 138, 0.3);
+  }
+
+  .bg-radial-aurora {
+    background: radial-gradient(circle at 50% 20%, rgba(244, 114, 182, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 80% 80%, rgba(192, 132, 252, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 20% 90%, rgba(251, 113, 133, 0.08) 0%, transparent 50%);
+  }
+}
+
+/* Custom romantic smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #06050e;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 113, 133, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 113, 133, 0.6);
+}
